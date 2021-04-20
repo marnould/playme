@@ -11,7 +11,7 @@ services:
         links:
             - php
         ports:
-            - "83:80"
+            - "86:80"
 
     php:
         environment:
@@ -31,9 +31,9 @@ services:
         restart: always
         environment:
             MYSQL_ROOT_PASSWORD: root
-            MYSQL_USER: gererseul
-            MYSQL_PASSWORD: gererseul
-            MYSQL_DATABASE: gererseul
+            MYSQL_USER: root
+            MYSQL_PASSWORD: root
+            MYSQL_DATABASE: playme
         ports:
             - "3308:3306"
 

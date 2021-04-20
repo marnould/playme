@@ -101,22 +101,22 @@ up-prod:
 start-prod: build-prod up-prod
 
 migrate-prod:
-	$(RUNPROD) phpprod $(CONSOLE) doctrine:migrations:migrate -n
+	$(RUNPROD) php $(CONSOLE) doctrine:migrations:migrate -n
 
 vendor-prod:
-	$(RUNPROD) phpprod composer install
-	$(RUNPROD) phpprod npm config set unsafe-perm=true
-	$(RUNPROD) phpprod npm install
+	$(RUNPROD) php composer install
+	$(RUNPROD) php npm config set unsafe-perm=true
+	$(RUNPROD) php npm install
 
 assets-prod:
-	$(RUNPROD) phpprod $(CONSOLE) assets:install --symlink --relative web
+	$(RUNPROD) php $(CONSOLE) assets:install --symlink --relative web
 	#need to be changed
 	./node_modules/grunt-cli/bin/grunt assetsDocker
 	./node_modules/bower/bin/bower install --force
 	./node_modules/bower/bin/bower install ./vendor/sonata-project/admin-bundle/bower.json --force
 
 clear-cache-prod:
-	$(EXECPROD) phpprod rm -rf var/cache/*
+	$(EXECPROD) php rm -rf var/cache/*
 
 stop-prod:
 	$(FIGPROD) stop && $(FIGPROD) rm -f
