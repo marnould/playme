@@ -1,0 +1,42 @@
+version: '3.1'
+
+services:
+
+    nginx:
+        build: docker/nginx
+        volumes:
+            - "./:/symfony"
+            - "./app/nginx-logs:/var/log/nginx"
+        restart: always
+        links:
+            - php
+        ports:
+            - "83:80"
+
+    php:
+        environment:
+            - COMPOSER_MEMORY_LIMIT=-1
+        build: docker/php
+        restart: always
+        volumes:
+            - "./:/symfony"
+        links:
+            - mysql
+
+    mysql:
+        build: docker/mysql
+        volumes:
+            - "./:/symfony"
+            - "gs_mysql/:/var/lib/mysql"
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_USER: gererseul
+            MYSQL_PASSWORD: gererseul
+            MYSQL_DATABASE: gererseul
+        ports:
+            - "3308:3306"
+
+volumes:
+  gs_mysql: 
+
