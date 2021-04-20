@@ -18212,3 +18212,8 @@
 2021/04/20 08:32:39 [emerg] 1#1: host not found in upstream "phpprod" in /etc/nginx/conf.d/default.conf:15
 2021/04/20 08:33:39 [emerg] 1#1: host not found in upstream "phpprod" in /etc/nginx/conf.d/default.conf:15
 2021/04/20 08:34:40 [emerg] 1#1: host not found in upstream "phpprod" in /etc/nginx/conf.d/default.conf:15
+2021/04/20 08:35:40 [emerg] 1#1: host not found in upstream "phpprod" in /etc/nginx/conf.d/default.conf:15
+2021/04/20 08:36:41 [emerg] 1#1: host not found in upstream "phpprod" in /etc/nginx/conf.d/default.conf:15
+2021/04/20 08:37:41 [emerg] 1#1: host not found in upstream "phpprod" in /etc/nginx/conf.d/default.conf:15
+2021/04/20 08:38:42 [emerg] 1#1: host not found in upstream "phpprod" in /etc/nginx/conf.d/default.conf:15
+2021/04/20 08:39:42 [emerg] 1#1: host not found in upstream "phpprod" in /etc/nginx/conf.d/default.conf:15
