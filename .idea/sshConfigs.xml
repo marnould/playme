@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="vps-c5a95775.vps.ovh.net" id="e3f964af-6470-4dfb-85c9-f7956e3574e8" port="22" customName="playme-prod" nameFormat="CUSTOM" username="ubuntu">
+        <option name="customName" value="playme-prod" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

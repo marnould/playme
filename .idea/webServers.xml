@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9f82f75d-c61a-4837-8740-801eb33eee30" name="playme-prod">
+        <fileTransfer rootFolder="/home/ubuntu" accessType="SFTP" host="vps-c5a95775.vps.ovh.net" port="22" sshConfigId="e3f964af-6470-4dfb-85c9-f7956e3574e8" sshConfig="playme-prod">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
