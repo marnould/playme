@@ -4,7 +4,7 @@ EXEC=$(FIG) exec
 CONSOLE=php bin/console
 SFCLI=symfony
 
-FIGPROD=docker-compose -f docker-compose-prod.yml
+FIGPROD=docker-compose -f docker-compose.yml
 RUNPROD=$(FIGPROD) run --rm
 EXECPROD=$(FIGPROD) exec
 
@@ -90,34 +90,34 @@ command:
 
 
 ## prod only
-update-prod: start-prod migrate-prod vendor-prod assets-prod clear-cache-prod
+update: start migrate vendor assets clear-cache
 
-build-prod:
+build:
 	$(FIGPROD) build
 
-up-prod:
+up:
 	$(FIGPROD) up -d
 
-start-prod: build-prod up-prod
+start: build up
 
-migrate-prod:
+migrate:
 	$(RUNPROD) php $(CONSOLE) doctrine:migrations:migrate -n
 
-vendor-prod:
+vendor:
 	$(RUNPROD) php composer install
 	$(RUNPROD) php npm config set unsafe-perm=true
 	$(RUNPROD) php npm install
 
-assets-prod:
+assets:
 	$(RUNPROD) php $(CONSOLE) assets:install --symlink --relative web
 	#need to be changed
 	./node_modules/grunt-cli/bin/grunt assetsDocker
 	./node_modules/bower/bin/bower install --force
 	./node_modules/bower/bin/bower install ./vendor/sonata-project/admin-bundle/bower.json --force
 
-clear-cache-prod:
+clear-cache:
 	$(EXECPROD) php rm -rf var/cache/*
 
-stop-prod:
+stop:
 	$(FIGPROD) stop && $(FIGPROD) rm -f
 
