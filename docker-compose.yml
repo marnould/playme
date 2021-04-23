@@ -12,15 +12,14 @@ services:
             - "./logs:/var/log"
         restart: always
         depends_on:
-            - php-fpm
+            - php
         ports:
             - "80:80"
 
-    php-fpm:
+    php:
         environment:
             - COMPOSER_MEMORY_LIMIT=-1
-        build:
-            context: ./php-fpm
+        build: docker/php
         restart: always
         depends_on:
             - mysql
