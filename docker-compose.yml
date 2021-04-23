@@ -3,25 +3,34 @@ version: '3.1'
 services:
 
     nginx:
-        build: docker/nginx
+        build:
+            context: ./nginx
         volumes:
-            - "./:/symfony"
-            - "./app/nginx-logs:/var/log/nginx"
+            - "../src:/var/www"
+            - "./nginx/nginx.conf:/etc/nginx/nginx.conf"
+            - "./nginx/sites/:/etc/nginx/sites-available"
+            - "./nginx/conf.d/:/etc/nginx/conf.d"
+            - "./logs:/var/log"
         restart: always
+        depends_on:
+            - php-fpm
         links:
             - php
         ports:
-            - "86:80"
+            - "80:80"
 
-    php:
-        environment:
-            - COMPOSER_MEMORY_LIMIT=-1
-        build: docker/php
-        restart: always
-        volumes:
-            - "./:/symfony"
-        links:
+    php-fpm:
+        build:
+            context: ./php-fpm
+        depends_on:
             - mysql
+        environment:
+            - APP_ENV=${APP_ENV}
+            - APP_SECRET=${APP_SECRET}
+            - DATABASE_URL=mysql://${DATABASE_USER}:${DATABASE_PASSWORD}@database:3306/${DATABASE_NAME}?serverVersion=5.7
+            volumes:
+                - ../src:/var/www
+        restart: always
 
     mysql:
         build: docker/mysql
