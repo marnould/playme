@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ac9fbd0-90f0-4916-b259-ac16eef63303" name="Default Changelist" comment="add new files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="9ac9fbd0-90f0-4916-b259-ac16eef63303" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,7 +177,7 @@
       <workItem from="1618912307615" duration="2054000" />
       <workItem from="1619086276196" duration="62000" />
       <workItem from="1619163524299" duration="732000" />
-      <workItem from="1619175547373" duration="1743000" />
+      <workItem from="1619175547373" duration="2062000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1618908781331</created>
@@ -224,7 +221,35 @@
       <option name="project" value="LOCAL" />
       <updated>1619178087078</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="link nginx to php-fpm instead of php">
+      <created>1619178135455</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619178135455</updated>
+    </task>
+    <task id="LOCAL-00008" summary="remove link to php-fpm (keep only depends on)">
+      <created>1619178187457</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1619178187457</updated>
+    </task>
+    <task id="LOCAL-00009" summary="change docker php conf">
+      <created>1619178285316</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1619178285316</updated>
+    </task>
+    <task id="LOCAL-00010" summary="change nginx port">
+      <created>1619178411902</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1619178411902</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +262,10 @@
     <MESSAGE value="docker config" />
     <MESSAGE value="change build in docker compose" />
     <MESSAGE value="revert config syntax" />
-    <option name="LAST_COMMIT_MESSAGE" value="revert config syntax" />
+    <MESSAGE value="link nginx to php-fpm instead of php" />
+    <MESSAGE value="remove link to php-fpm (keep only depends on)" />
+    <MESSAGE value="change docker php conf" />
+    <MESSAGE value="change nginx port" />
+    <option name="LAST_COMMIT_MESSAGE" value="change nginx port" />
   </component>
 </project>

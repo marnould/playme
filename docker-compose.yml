@@ -6,7 +6,7 @@ services:
         build: docker/nginx
         volumes:
             - "../src:/var/www"
-            - "./nginx/nginx.conf:/etc/nginx/nginx.conf"
+            - "./nginx/nginx.conf:/etc/nginx/"
             - "./nginx/sites/:/etc/nginx/sites-available"
             - "./nginx/conf.d/:/etc/nginx/conf.d"
             - "./logs:/var/log"
