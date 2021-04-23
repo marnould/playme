@@ -14,7 +14,7 @@ services:
         depends_on:
             - php
         ports:
-            - "80:80"
+            - "86:80"
 
     php:
         environment:
