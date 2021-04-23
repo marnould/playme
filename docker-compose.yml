@@ -14,7 +14,7 @@ services:
         depends_on:
             - php-fpm
         links:
-            - php
+            - php-fpm
         ports:
             - "80:80"
 
