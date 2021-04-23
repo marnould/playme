@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ac9fbd0-90f0-4916-b259-ac16eef63303" name="Default Changelist" comment="" />
+    <list default="true" id="9ac9fbd0-90f0-4916-b259-ac16eef63303" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/nginx/conf/nginx.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/nginx/conf/sites_default.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/nginx/conf/symfony.conf" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/conf/symfony.conf" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +182,7 @@
       <workItem from="1618912307615" duration="2054000" />
       <workItem from="1619086276196" duration="62000" />
       <workItem from="1619163524299" duration="732000" />
-      <workItem from="1619175547373" duration="2255000" />
+      <workItem from="1619175547373" duration="2859000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1618908781331</created>
@@ -256,7 +261,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619178613005</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="remove ngix volumes logs">
+      <created>1619178860798</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1619178860798</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add ngninx conf">
+      <created>1619179027828</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1619179027828</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +293,8 @@
     <MESSAGE value="change docker php conf" />
     <MESSAGE value="change nginx port" />
     <MESSAGE value="remove filename in nginx conf in dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove filename in nginx conf in dockerfile" />
+    <MESSAGE value="remove ngix volumes logs" />
+    <MESSAGE value="add ngninx conf" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ngninx conf" />
   </component>
 </project>
