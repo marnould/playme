@@ -13,8 +13,6 @@ services:
         restart: always
         depends_on:
             - php-fpm
-        links:
-            - php-fpm
         ports:
             - "80:80"
 
