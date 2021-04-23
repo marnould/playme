@@ -19,16 +19,17 @@ services:
             - "80:80"
 
     php-fpm:
-        build: docker/php-fpm
+        environment:
+            - COMPOSER_MEMORY_LIMIT=-1
+        build:
+            context: ./php-fpm
+        restart: always
         depends_on:
             - mysql
-        environment:
-            - APP_ENV=${APP_ENV}
-            - APP_SECRET=${APP_SECRET}
-            - DATABASE_URL=mysql://${DATABASE_USER}:${DATABASE_PASSWORD}@database:3306/${DATABASE_NAME}?serverVersion=5.7
-            volumes:
-                - ../src:/var/www
-        restart: always
+        volumes:
+            - "./:/symfony"
+        links:
+            - mysql
 
     mysql:
         build: docker/mysql
