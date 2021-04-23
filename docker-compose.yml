@@ -9,7 +9,6 @@ services:
             - "./nginx/nginx.conf:/etc/nginx/"
             - "./nginx/sites/:/etc/nginx/sites-available"
             - "./nginx/conf.d/:/etc/nginx/conf.d"
-            - "./logs:/var/log"
         restart: always
         depends_on:
             - php

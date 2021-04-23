@@ -177,7 +177,7 @@
       <workItem from="1618912307615" duration="2054000" />
       <workItem from="1619086276196" duration="62000" />
       <workItem from="1619163524299" duration="732000" />
-      <workItem from="1619175547373" duration="2062000" />
+      <workItem from="1619175547373" duration="2255000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1618908781331</created>
@@ -249,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619178411902</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="remove filename in nginx conf in dockerfile">
+      <created>1619178613005</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1619178613005</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +273,7 @@
     <MESSAGE value="remove link to php-fpm (keep only depends on)" />
     <MESSAGE value="change docker php conf" />
     <MESSAGE value="change nginx port" />
-    <option name="LAST_COMMIT_MESSAGE" value="change nginx port" />
+    <MESSAGE value="remove filename in nginx conf in dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove filename in nginx conf in dockerfile" />
   </component>
 </project>
