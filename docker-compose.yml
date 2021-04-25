@@ -1,40 +1,50 @@
-version: '3.1'
+version: '3.8'
 
 services:
-    nginx:
-        image: nginx:1.15.3-alpine
+    postgres:
+        image: postgres:12.4-alpine
         restart: on-failure
+        environment:
+            POSTGRES_DB: playme
+            POSTGRES_USER: playme_usr
+            POSTGRES_PASSWORD: 2345playMePasS35
+            PGDATA: /var/lib/postgresql/data
         volumes:
-            - './docker/nginx/default.conf:/etc/nginx/conf.d'
+            - db-data:/var/lib/postgresql/data:rw
         ports:
-            - '8080:80'
+            - "5432:5432"
 
     php:
+        build:
+            context: .
+            target: app_php #target the app_php section in ./Dockerfile
+        image: sf-docker/php:dev #path-to-custom-image:tag
+        restart: on-failure
         environment:
-            - COMPOSER_MEMORY_LIMIT=-1
-        build: docker/php
-        restart: always
+            APP_ENV: dev
+            APP_DEBUG: 1
+            PHP_DATE_TIMEZONE: ${PHP_DATE_TIMEZONE:-UTC}
+            XDEBUG_CONFIG: remote_host=docker.for.mac.localhost
+            PHP_IDE_CONFIG: serverName=localhost
         depends_on:
-            - mysql
+            - postgres
         volumes:
-            - "./:/symfony"
-        links:
-            - mysql
+            - .:/app:rw,cached
+            - var:/app/var
 
-    mysql:
-        build: docker/mysql
+    nginx:
+        build:
+            context: .
+            target: app_nginx #target the app_nginx section in ./Dockerfile
+        image: sf-docker/nginx:dev #path-to-custom-image:tag
+        restart: on-failure
+        depends_on:
+            - php
         volumes:
-            - "./:/symfony"
-            - "mysql/:/var/lib/mysql"
-        restart: always
-        environment:
-            MYSQL_ROOT_PASSWORD: root
-            MYSQL_USER: marnould
-            MYSQL_PASSWORD: playmepass
-            MYSQL_DATABASE: playme
+            - ./public:/app/public:ro
         ports:
-            - "3308:3306"
+            - "8080:80"
 
 volumes:
-  mysql:
-
+    db-data:
+    var:

@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac9fbd0-90f0-4916-b259-ac16eef63303" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/playme.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/playme.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/nginx/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/nginx/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/nginx/conf/symfony.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/php/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/php/conf/php-fpm.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/php/conf/php.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +161,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -162,7 +171,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/docker/php" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docker/nginx" />
       <recent name="$PROJECT_DIR$/docker/nginx/conf" />
     </key>
   </component>
@@ -181,7 +195,12 @@
       <workItem from="1618912307615" duration="2054000" />
       <workItem from="1619086276196" duration="62000" />
       <workItem from="1619163524299" duration="732000" />
-      <workItem from="1619175547373" duration="3320000" />
+      <workItem from="1619175547373" duration="13854000" />
+      <workItem from="1619256182588" duration="157000" />
+      <workItem from="1619256356532" duration="2462000" />
+      <workItem from="1619268611458" duration="92000" />
+      <workItem from="1619282136364" duration="87000" />
+      <workItem from="1619348379498" duration="888000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1618908781331</created>
@@ -281,7 +300,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619179453747</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="change nginx conf">
+      <created>1619180177942</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1619180177942</updated>
+    </task>
+    <task id="LOCAL-00016" summary="remove filename in dockercompose">
+      <created>1619180319058</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1619180319058</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,6 +335,8 @@
     <MESSAGE value="remove ngix volumes logs" />
     <MESSAGE value="add ngninx conf" />
     <MESSAGE value="change symfony nginx conf" />
-    <option name="LAST_COMMIT_MESSAGE" value="change symfony nginx conf" />
+    <MESSAGE value="change nginx conf" />
+    <MESSAGE value="remove filename in dockercompose" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove filename in dockercompose" />
   </component>
 </project>
