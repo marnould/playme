@@ -188,7 +188,7 @@
       <workItem from="1619256356532" duration="2462000" />
       <workItem from="1619268611458" duration="92000" />
       <workItem from="1619282136364" duration="87000" />
-      <workItem from="1619348379498" duration="2421000" />
+      <workItem from="1619348379498" duration="2721000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1618908781331</created>
@@ -316,7 +316,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619350936304</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="change docker-compose_prod.yml version">
+      <created>1619351290552</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1619351290552</updated>
+    </task>
+    <task id="LOCAL-00020" summary="revert change version of docker-compose_prod.yml">
+      <created>1619351533029</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1619351533029</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,6 +357,8 @@
     <MESSAGE value="remove filename in dockercompose" />
     <MESSAGE value="Set up dev env" />
     <MESSAGE value="Set up prod env" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up prod env" />
+    <MESSAGE value="change docker-compose_prod.yml version" />
+    <MESSAGE value="revert change version of docker-compose_prod.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="revert change version of docker-compose_prod.yml" />
   </component>
 </project>
